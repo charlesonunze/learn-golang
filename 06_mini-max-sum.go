@@ -12,14 +12,13 @@ func miniMaxSum(arr []int) {
 	arrayLength := int(len(arr))
 
 	for i = 0; i < arrayLength; i++ {
-		var min, max int
+		var sum int
 		for j = 0; j < arrayLength; j++ {
 			if i != j {
-				min += arr[j]
-				max += arr[j]
+				sum += arr[j]
 			}
 		}
-		_arr = append(_arr, min)
+		_arr = append(_arr, sum)
 	}
 
 	sort.Ints(_arr)
